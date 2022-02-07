@@ -100,7 +100,7 @@ app.post('/table_save',function (req, res) {
   var columntype= req.body.columntype;
   var row = req.body.row;
   var tablename = req.body.tablename;
-  var user=req.user;
+  var user=req.user.name;
   //data saving 
 
   const Dynamic = mongoose.model('table_data', dataSchema);
@@ -118,7 +118,8 @@ app.post('/table_save',function (req, res) {
   table.save().then(() => console.log("One entry added"+ data));
   //end
   res.render("table_save", {data: data,colcount: colcount, rowcount: rowcount, column: column, columntype: columntype, row: row, tablename: tablename,user:user}) 
-  console.log(req.body)
+  console.log(req.body);
+  console.log(user);
 })
 
 app.post('/home', function(req,res){
