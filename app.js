@@ -19,12 +19,7 @@ require('./config/passport')(passport);
 app.use(expressLayouts);
 app.set('view engine', 'ejs');
 
-// Setting directory Path
-app.use(express.static('assets'));
-app.use('/:page',express.static('assets'));
-app.use('/:page/:page',express.static('assets'));
-app.use('/:page/:page/:page',express.static('assets'));
-app.use('/:page/:page/:page/:page',express.static('assets'));
+
 const MongoClient = require('mongodb').MongoClient
 
 
