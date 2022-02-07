@@ -73,3 +73,6 @@ $ npm start
 # Mongodb 
 Open "config/keys.js" and add your MongoDB URI, local or Atlas
 
+# To checkout live
+https://dashboard.heroku.com/apps/my-walkover-project
+
